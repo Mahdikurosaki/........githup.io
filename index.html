@@ -23,8 +23,9 @@
             padding: 20px;
         }
         .message {
-            font-size: 24px;
+            font-size: 18px; /* تصغير حجم النص لتناسب الهواتف */
             color: #333;
+            text-align: right; /* محاذاة النص إلى اليمين لأفضل قراءة */
         }
         .image {
             margin-top: 20px;
@@ -32,14 +33,20 @@
         footer {
             background-color: #252524;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
         footer p {
             margin: 0;
             color: #fff;
             font-size: 14px;
+        }
+        /* تعديلات خاصة بأجهزة الهواتف المحمولة */
+        @media only screen and (max-width: 600px) {
+            .message {
+                font-size: 16px; /* تصغير النص بعض الشيء على الأجهزة المحمولة */
+            }
+            .image img {
+                width: 100%; /* جعل الصورة تمتد لتأخذ عرض الشاشة بالكامل */
+            }
         }
     </style>
 </head>
@@ -66,4 +73,3 @@
     </footer>
 </body>
 </html>
-
